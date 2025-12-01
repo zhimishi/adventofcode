@@ -5,7 +5,6 @@ input_file = "input.txt"
 def main():
     sum = 50
     number_of_times_0 = 0
-    print_first_10_lines = 0 
     with open(input_file, "r") as f:
         lines = f.readlines()
         for line in lines:
@@ -23,13 +22,8 @@ def main():
                         sum = (sum - 1) % 100
                         if sum == 0:
                             number_of_times_0 += 1
-            if print_first_10_lines < 10:
-                print_first_10_lines += 1
-                print(f"Direction: {direction}, Value: {value}, New Sum: {sum}")
     print(f"Total: {number_of_times_0}")
 
 
 if __name__ == "__main__":
     main()
-
-
